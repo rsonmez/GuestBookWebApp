@@ -11,8 +11,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Guest Book Form</title>
     </head>
-    <body>
-        <form method="POST" action="GuestBookJsp.jsp">
+    <body bgcolor="red">
+        <form method="POST" action="login_control.jsp">
             <table style="margin: 0 auto;">
                 <tr>
                     <td>* Email address: </td>
