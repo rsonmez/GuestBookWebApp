@@ -29,7 +29,7 @@
                 </tr>     
                 <tr>
                     <td>* Doğum : </td>
-                    <td><input type="text" name="Dogum" /></td>
+                    <td><input type="date" name="Dogum" /></td>
                 </tr>
                 <tr>
                     <td>Cinsiyet : </td>
@@ -46,15 +46,18 @@
                 <tr>
                     <!--input type=checkbox name=java value=java> <i>Java How to Program</i><br> -->
                     <td>Medeni durum :</td>
-                    <td><input type=checkbox name="Evli" value="E"><i>Evli</i>
-                        <input type=checkbox name="Bekar" value="B"><i>Bekar</i><br>    
+                    <td><input type=radio name="Medeni_durum" value="E"><i>Evli</i>
+                        <input type=radio name="Medeni_durum" value="B"><i>Bekar</i><br>    
                 </tr>
                 <tr>
                     <td>* Ev Adresi : </td>
-                    <td><input type="text" name="EvAdresi" /></td>
+                    <td><textarea rows="4" cols="17">
+                    </textarea></td></td>
                 </tr>
                 <td> İş Adresi : </td>
-                <td><input type="text" name="IsAdresi" /></td>
+
+                <td><textarea rows="4" cols="17">
+                    </textarea></td> 
                 </tr>
                 <tr>
                     <td>E-mail : </td>
@@ -74,14 +77,16 @@
                 </tr>
                 <tr>
                     <td>Açıklamalar : </td>
-                    <td><input type="text" name="Acıklamalar" width=50 height=50/></td><br>
+                    <td><textarea rows="4" cols="17">
+                    </textarea></td>
+                </td><br>
                 </tr>
                 <tr>
                     <td>
                         <pre>* bu alanların doldurulması mecburi </pre>
                     </td>
                     <td><input type="submit" value="Kayıt" style="float:right;"/>
-                        <input type="submit" value="Vazgeç" style="float:right;" /></td>
+                        <input type="button" onclick="document.location.href = 'GetPersonInfoForm.jsp'" value="Vazgeç" style="float:right;" /></td>
                 </tr>
             </table>
         </form>
