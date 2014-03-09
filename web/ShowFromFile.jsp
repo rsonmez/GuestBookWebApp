@@ -37,7 +37,7 @@
 
             tckn = person.getTckn();
             isim = person.getIsim();
-            person.getSoyad(soyad);
+            soyad = person.getSoyad();
             person.getDogum(dogum);
             person.getCinsiyet(cinsiyet);
             person.getEvli(evli);

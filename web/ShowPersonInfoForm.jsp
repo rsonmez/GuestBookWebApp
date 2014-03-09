@@ -86,7 +86,7 @@
                         <pre>* bu alanlarda bilgi yoksa hatalı giriş yapılmıştır !</pre>
                     </td>
                     <td><input type="submit" value="Göster" style="float:right;"/>
-                        <input type="button" onclick="document.location.href = 'GetPersonInfoForm.jsp'" value="Vazgeç" style="float:right;" /></td>
+                        <input type="button" onclick="document.location.href = 'AddOrSearchPerInfoForm.jsp'" value="Vazgeç" style="float:right;" /></td>
                 </tr>
             </table>
         </form>
