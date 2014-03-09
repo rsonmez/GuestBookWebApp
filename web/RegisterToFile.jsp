@@ -38,6 +38,7 @@
             aciklamalar = request.getParameter("Aciklamalar");
 
             Person person = new Person();
+
             person.setTckn(tckn);
             person.setIsim(isim);
             person.setSoyad(soyad);
@@ -51,46 +52,63 @@
             person.setTel2(tel2);
             person.setFax(fax);
             person.setAciklamalar(aciklamalar);
+
             try {
-                File fileName = new File("c:\\Depolama.txt");
+//                File fileName = new File("c:\\Depolama.txt");
+                File fileName = new File("/home/ridvan/tmp/Depolama.txt");
                 System.out.println(fileName);
-//                ObjectOutputStream output;
-//                output = new ObjectOutputStream(new FileOutputStream(fileName));
-//                output.writeObject(person);
-                FileOutputStream output;
-                output.
+                //if file doesnt exists, then create it
+                if (!fileName.exists()) {
+                    fileName.createNewFile();
+                }
+
+                ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(fileName, true));
+                output.writeObject(person);
                 output.close();
+                System.out.println("Done");
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
+            response.sendRedirect("GetPersonInfoForm.jsp");
         %>
     </body>
 </html>
+<!--
+           FileOutputStream fos = new FileOutputStream("EmployeeObject.ser");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            //write object to file
+            oos.writeObject(emp);
+            System.out.println("Done");
+            //closing resources
+            oos.close();
+            fos.close();
+
 
 public class AppendToFileExample 
 {
     public static void main( String[] args )
     {	
-    	try{
-    		String data = " This content will append to the end of the file";
+        try{
+                String data = " This content will append to the end of the file";
  
-    		File file =new File("javaio-appendfile.txt");
+                File file =new File("javaio-appendfile.txt");
  
-    		//if file doesnt exists, then create it
-    		if(!file.exists()){
-    			file.createNewFile();
-    		}
+                //if file doesnt exists, then create it
+                if(!file.exists()){
+                        file.createNewFile();
+                }
  
-    		//true = append file
-    		FileWriter fileWritter = new FileWriter(file.getName(),true);
-    	        BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
-    	        bufferWritter.write(data);
-    	        bufferWritter.close();
+                //true = append file
+                FileWriter fileWritter = new FileWriter(file.getName(),true);
+                BufferedWriter bufferWritter = new BufferedWriter(fileWritter);
+                bufferWritter.write(data);
+                bufferWritter.close();
  
-	        System.out.println("Done");
+                System.out.println("Done");
  
-    	}catch(IOException e){
-    		e.printStackTrace();
-    	}
+        }catch(IOException e){
+                e.printStackTrace();
+        }
     }
 }
+-->

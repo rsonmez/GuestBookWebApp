@@ -17,7 +17,7 @@
         body{
             background-image:url("adipromohdpi_1440.png");}
     </style>        
-        <form method="POST" action="GuestBookControl.jsp">
+        <form method="POST" action="AddOrSearchPerInfoForm.jsp">
             <table style="margin: 0 auto;">
             <tr>
                 <td>E-mail : </td>

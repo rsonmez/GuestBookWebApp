@@ -30,12 +30,10 @@
         }
 
         if (onaylandi == false) {
-            tgtPage = "GuestBookCtlClean.jsp";
-            response.sendRedirect( tgtPage );
+            response.sendRedirect("GuestBookCtlClean.jsp");
         } else {
-//            out.write("Giriş Onaylandı.");
-            tgtPage = "GetPersonInfoForm.jsp";
-            response.sendRedirect( tgtPage );
+            response.sendRedirect("AddOrSearchPerInfoForm.jsp");
+//            response.sendRedirect("GetPersonInfoForm.jsp");
         }
     %>
 </html>

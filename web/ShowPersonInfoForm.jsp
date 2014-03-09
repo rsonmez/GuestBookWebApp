@@ -1,6 +1,6 @@
 <%-- 
-    Document   : newjspGetPersonInfoForm
-    Created on : Mar 8, 2014, 1:38:30 PM
+    Document   : AddSearchPersonInFile
+    Created on : Mar 9, 2014, 3:37:40 PM
     Author     : ridvan
 --%>
 
@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Get Personal Information Form</title>
+        <title>Show Personal Information Form</title>
     </head>
     <body bgcolor="red">
-        <h2>Kişisel Bilgi Giriş Formu </h2>
+        <h2>Kişisel Bilgileri Gösterme Formu </h2>
         <form method="POST" action="RegisterToFile.jsp">
             <table style="margin-left">
                 <tr>
@@ -83,9 +83,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <pre>* bu alanların doldurulması mecburi </pre>
+                        <pre>* bu alanlarda bilgi yoksa hatalı giriş yapılmıştır !</pre>
                     </td>
-                    <td><input type="submit" value="Kayıt" style="float:right;"/>
+                    <td><input type="submit" value="Göster" style="float:right;"/>
                         <input type="button" onclick="document.location.href = 'GetPersonInfoForm.jsp'" value="Vazgeç" style="float:right;" /></td>
                 </tr>
             </table>
